@@ -1,0 +1,36 @@
+# The code style of the dos/ programs (clang-format 18; tools/format.sh).
+BasedOnStyle: LLVM
+IndentWidth: 2
+ColumnLimit: 120
+AccessModifierOffset: -2
+IndentCaseLabels: true
+SpacesInParens: Custom
+SpacesInParensOptions:
+  InConditionalStatements: true
+  Other: true
+SpaceBeforeParens: ControlStatements
+Cpp11BracedListStyle: false
+PointerAlignment: Right
+BreakBeforeBraces: Custom
+BraceWrapping:
+  BeforeElse: true
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: true
+AlignAfterOpenBracket: Align
+AlignTrailingComments: true
+AlignConsecutiveMacros: false
+AlignOperands: true
+BinPackParameters: true
+BinPackArguments: true
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 4
+PackConstructorInitializers: BinPack
+ReflowComments: false
+SortIncludes: Never
+IncludeBlocks: Preserve
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
