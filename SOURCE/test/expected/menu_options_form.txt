@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║ 1 ► NORMAL     Normal start                                2 lines  2 lines  ║
+║ 2   GAMES      Games (EMS)                                 2 lines  2 lines  ║
+║ 3   CLEAN      Clean boot                                  0 lines  1 line   ║
+║                                                                              ║
+║   ╔═ Boot menu ══════════════════════════════════════════════════════════╗   ║
+║   ║                                                                      ║   ║
+║   ║  Default          NORMAL                                             ║   ║
+║   ║                                                                      ║   ║
+║   ║  Timeout          10                                                 ║   ║
+╟─ M║                                                                      ║───╢
+║ De║  Color            15,1                                               ║   ║
+║   ║                                                                      ║   ║
+╟─ F║  NumLock                                                             ║───╢
+║ C:║                                                                      ║   ║
+║ C:╟──────────────────────────────────────────────────────────────────────╢   ║
+║ C:║ The block of the item that starts when the time runs out             ║   ║
+╟───╚══════════════════════════════════════════════════════════════════════╝───╢
+║ Backups: none yet (saving makes one first)                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Tab/↑↓ Field  Enter Next, OK  F2 OK  Esc Cancel  Ctrl+Y Clear

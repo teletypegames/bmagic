@@ -1,0 +1,25 @@
+ Changes not saved yet                                               CONFIG.SYS
+  old  new    removed: 1   added: 1
+           ··· 15 lines the same ···
+   16   16
+   17   17   [GAMES]
+   18   18   DEVICE=C:\DOS\HIMEM.SYS
+   19      - DEVICE=C:\DOS\EMM386.EXE RAM 2048
+        19 + DEVICE=C:\DOS\EMM386.EXE NOEMS
+   20   20
+   21   21   [CLEAN]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ↑↓ PgUp PgDn Scroll  Tab Next file  ←→ Shift  Esc Back

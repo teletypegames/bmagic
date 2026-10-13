@@ -1,0 +1,56 @@
+# First the fast checks (scripts/ci-check.sh): the code style, the layers and the unit
+# tests on the host (SOURCE/test/unit). Then it builds BMAGIC.EXE with
+# Open Watcom and runs the screen tests:
+# SOURCE/test/run.py runs the program in DOSBox for every case of SOURCE/test/cases.txt
+# and compares the screen and the written files with the expected ones. Debian's dosbox
+# package is DOSBox 0.74, which run.py drives headless (SDL dummy video and audio); the
+# expected results were made with DOSBox Staging. scripts/ci-toolchain.sh installs the pinned Open Watcom and clang-format.
+#
+# A tag (vX.Y.Z) also publishes a Gitea release: BMAGIC-<tag>.zip with the BMAGIC folder
+# to install, and BMAGIC.EXE alone, for updating an installed one.
+#
+# A tag also puts the program into the DOSINST program store (dos/dosinst, served as
+# ftp://ftp.teletypegames.org): the store step writes the BMAGIC folder with an INFO.INI
+# into the server's /srv/stacks/dosinst/programs. The volume needs the repository to be
+# trusted for volumes in Woodpecker (Repo settings -> Trusted).
+when:
+  - event: [push, manual]
+    branch: master
+  - event: pull_request
+  - event: tag
+
+steps:
+  - name: test
+    image: debian:bookworm-slim
+    commands:
+      - scripts/ci-toolchain.sh
+      - scripts/ci-check.sh
+      - scripts/ci-build.sh
+      - scripts/ci-test.sh
+
+  # Only on a tag, and only after the tests passed: the release gets the program the
+  # test step built and tested.
+  - name: release
+    image: alpine
+    environment:
+      # A build started by the tag webhook may not get Woodpecker's forge credential, so
+      # the token is a repository secret; the script falls back to the forge credential
+      # when it is there.
+      GITEA_TOKEN:
+        from_secret: gitea_token
+    commands:
+      - apk add --no-cache curl jq zip
+      - scripts/ci-package.sh
+      - scripts/ci-upload.sh
+    when:
+      - event: tag
+
+  # Only on a tag, after the release: DOSINST installs and updates BMAGIC from the store.
+  - name: store
+    image: alpine
+    volumes:
+      - /srv/stacks/dosinst/programs:/store
+    commands:
+      - scripts/ci-store.sh
+    when:
+      - event: tag

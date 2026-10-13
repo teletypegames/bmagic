@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:                                   * changed
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║ 1   GAMES      Games (EMS)                                 2 lines  2 lines  ║
+║ 2   CLEAN      Clean boot                                  0 lines  1 line   ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╟─ Menu ───────────────────────────────────────────────────────────────────────╢
+║ Default: (the first item), waits   Color: 15,1   NumLock: -                  ║
+║                                                                              ║
+╟─ Files ──────────────────────────────────────────────────────────────────────╢
+║ C:\CONFIG.SYS   15 lines, changed                                            ║
+║ C:\AUTOEXEC.BAT 13 lines, changed                                            ║
+║ C:\MSDOS.SYS    14 lines  BootMenu=-  BootMenuDelay=-  BootGUI=1  Logo=1     ║
+╟──────────────────────────────────────────────────────────────────────────────╢
+║ Backups: none yet (saving makes one first)                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+ Save the changes?  Y: review and save   N: quit without saving   Esc: stay
+ Enter Lines Ins New Del Delete F2 Save F4 Changes F9 Backups F1 Help Esc Quit

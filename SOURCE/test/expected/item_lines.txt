@@ -1,0 +1,25 @@
+ Item GAMES: Games (EMS)
+╔═ Menu item ══════════════════════════════════════════════════════════════════╗
+║ [GAMES]  in C:\CONFIG.SYS                                                    ║
+║   18 DEVICE=C:\DOS\HIMEM.SYS                                                 ║
+║   19 DEVICE=C:\DOS\EMM386.EXE RAM 2048                                       ║
+║   20                                                                         ║
+║ :GAMES  in C:\AUTOEXEC.BAT                                                   ║
+║   11 LH C:\MOUSE\MOUSE.COM                                                   ║
+║   12 GOTO END                                                                ║
+║   13                                                                         ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Enter Edit Ins Add Del Delete Ctrl+PgUp/Dn Move F4 Changes F1 Help Esc Back

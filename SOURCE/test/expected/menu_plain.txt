@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║                                                                              ║
+║   CONFIG.SYS has no boot menu.                                               ║
+║                                                                              ║
+║   Ins adds the first item: [MENU] goes to the top of CONFIG.SYS, and the     ║
+║   lines that are there now become the [COMMON] part of every item.           ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╟─ Menu ───────────────────────────────────────────────────────────────────────╢
+║                                                                              ║
+║                                                                              ║
+╟─ Files ──────────────────────────────────────────────────────────────────────╢
+║ C:\CONFIG.SYS   3 lines                                                      ║
+║ C:\AUTOEXEC.BAT 2 lines                                                      ║
+║ C:\MSDOS.SYS    none                                                         ║
+╟──────────────────────────────────────────────────────────────────────────────╢
+║ Backups: none yet (saving makes one first)                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Enter Lines Ins New Del Delete F2 Save F4 Changes F9 Backups F1 Help Esc Quit

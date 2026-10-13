@@ -1,0 +1,25 @@
+ C:\AUTOEXEC.BAT
+╔═ File ═══════════════════════════════════════════════════════════════════════╗
+║ C:\AUTOEXEC.BAT                                                              ║
+║    1 @ECHO OFF                                                               ║
+║    2 PROMPT $P$G                                                             ║
+║    3 PATH C:\DOS;C:\APPS\BMAGIC                                              ║
+║    4 GOTO %CONFIG%                                                           ║
+║    5                                                                         ║
+║    6 :NORMAL                                                                 ║
+║    7 LH C:\DOS\SMARTDRV.EXE                                                  ║
+║    8 GOTO END                                                                ║
+║    9                                                                         ║
+║   10 :GAMES                                                                  ║
+║   11 LH C:\MOUSE\MOUSE.COM                                                   ║
+║   12 GOTO END                                                                ║
+║   13                                                                         ║
+║   14 :CLEAN                                                                  ║
+║   15 GOTO END                                                                ║
+║   16                                                                         ║
+║   17 :END                                                                    ║
+║                                                                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Enter Edit Ins Add Del Delete Ctrl+PgUp/Dn Move Tab File F4 Changes Esc Back

@@ -1,0 +1,25 @@
+ Review the changes, then F2 saves them                              CONFIG.SYS
+  old  new    removed: 0   added: 1
+           ··· 10 lines the same ···
+   11   11   BUFFERS=20
+   12   12
+   13   13   [NORMAL]
+        14 + LH C:\DOS\DOSKEY.COM
+   14   15   DEVICE=C:\DOS\HIMEM.SYS
+   15   16   DEVICEHIGH=C:\DOS\SETVER.EXE
+   16   17
+           ··· 5 lines the same ···
+
+
+
+
+
+
+
+
+
+
+
+
+
+ F2 Save  ↑↓ PgUp PgDn Scroll  Tab Next file  ←→ Shift  Esc Back

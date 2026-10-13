@@ -1,0 +1,14 @@
+[Paths]
+WinDir=C:\WINDOWS
+WinBootDir=C:\WINDOWS
+HostWinBootDrv=C
+
+[Options]
+BootMulti=1
+BootGUI=1
+Logo=1
+;
+;The following lines are required for compatibility with other programs.
+;Do not remove them (MSDOS.SYS needs to be >1024 bytes).
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxa
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxb

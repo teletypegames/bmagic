@@ -1,0 +1,25 @@
+ C:\CONFIG.SYS
+╔═ File ═══════════════════════════════════════════════════════════════════════╗
+║ C:\CONFIG.SYS                                                                ║
+║    1 [MENU]                                                                  ║
+║    2 MENUITEM=NORMAL,Normal start                                            ║
+║    3 MENUITEM=GAMES,Games (EMS)                                              ║
+║    4 MENUITEM=CLEAN,Clean boot                                               ║
+║    5 MENUDEFAULT=NORMAL,10                                                   ║
+║    6 MENUCOLOR=15,1                                                          ║
+║    7                                                                         ║
+║    8 [COMMON]                                                                ║
+║    9 DOS=HIGH,UMB                                                            ║
+║   10 FILES=40                                                                ║
+║   11 BUFFERS=20                                                              ║
+║   12                                                                         ║
+║   13 [NORMAL]                                                                ║
+║   14 DEVICE=C:\DOS\HIMEM.SYS                                                 ║
+║   15 DEVICEHIGH=C:\DOS\SETVER.EXE                                            ║
+║   16                                                                         ║
+║   17 [GAMES]                                                                 ║
+║   18 DEVICE=C:\DOS\HIMEM.SYS                                                 ║
+║   19 DEVICE=C:\DOS\EMM386.EXE RAM 2048                                       ║
+╚══════════════════════════════════════════════════════════════════════════↓═══╝
+
+ Enter Edit Ins Add Del Delete Ctrl+PgUp/Dn Move Tab File F4 Changes Esc Back

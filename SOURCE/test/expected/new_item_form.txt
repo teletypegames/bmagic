@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║ 1 ► NORMAL     Normal start                                2 lines  2 lines  ║
+║ 2   GAMES      Games (EMS)                                 2 lines  2 lines  ║
+║ 3   CLEAN      Clean boot                                  0 lines  1 line   ║
+║                                                                              ║
+║                                                                              ║
+║   ╔═ New menu item ══════════════════════════════════════════════════════╗   ║
+║   ║                                                                      ║   ║
+║   ║  Block name       safe                                               ║   ║
+║   ║                                                                      ║   ║
+╟─ M║  Menu text        Safe mode                                          ║───╢
+║ De║                                                                      ║   ║
+║   ║  Copy of          games                                              ║   ║
+╟─ F║                                                                      ║───╢
+║ C:╟──────────────────────────────────────────────────────────────────────╢   ║
+║ C:║ An item whose lines the new one starts with (empty: none)            ║   ║
+║ C:╚══════════════════════════════════════════════════════════════════════╝   ║
+╟──────────────────────────────────────────────────────────────────────────────╢
+║ Backups: none yet (saving makes one first)                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Tab/↑↓ Field  Enter Next, OK  F2 OK  Esc Cancel  Ctrl+Y Clear

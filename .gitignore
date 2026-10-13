@@ -1,0 +1,10 @@
+BMAGIC.EXE
+SOURCE/build/
+SOURCE/test/expected/*.got
+dist/
+*.err
+.DS_Store
+# Written when this checkout is also the installed program
+/BACKUP/
+/INFO.INI
+/INSTALL.LST

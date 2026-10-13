@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║ 1 ► NORMAL     Normal start                                2 lines  2 lines  ║
+║ 2   GAMES      Games (EMS)                                 2 lines  2 lines  ║
+║ 3 ╔═ Windows startup (MSDOS.SYS) ════════════════════════════════════════╗   ║
+║   ║                                                                      ║   ║
+║   ║  BootMenu                                                            ║   ║
+║   ║                                                                      ║   ║
+║   ║  BootMenuDefault                                                     ║   ║
+║   ║                                                                      ║   ║
+║   ║  BootMenuDelay                                                       ║   ║
+╟─ M║                                                                      ║───╢
+║ De║  BootGUI          1                                                  ║   ║
+║   ║                                                                      ║   ║
+╟─ F║  Logo             1                                                  ║───╢
+║ C:║                                                                      ║   ║
+║ C:║  BootKeys                                                            ║   ║
+║ C:║                                                                      ║   ║
+╟───╟──────────────────────────────────────────────────────────────────────╢───╢
+║ Ba║ 1: the Windows Startup Menu at every boot, 0: only with F8           ║   ║
+║   ╚══════════════════════════════════════════════════════════════════════╝   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Tab/↑↓ Field  Enter Next, OK  F2 OK  Esc Cancel  Ctrl+Y Clear

@@ -1,0 +1,167 @@
+ Boot Magic - backups                                     C:\APPS\BMAGIC\BACKUP
+╔═ Backups ════════════════════════════════════════════════════════════════════╗
+║ Set   Date        Time   Note                         Files                  ║
+║ 002   YYYY-MM-DD  HH:MM  Made by hand                 CONFIG AUTOEXEC MSDOS  ║
+║ 001   YYYY-MM-DD  HH:MM  Before saving                CONFIG AUTOEXEC MSDOS  ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+ Backup 002 made.
+ Enter Compare Ins Back up now R Restore Del Delete Esc Back
+CONFIG.SYS:
+[MENU]
+MENUITEM=GAMES,Games (EMS)
+MENUITEM=CLEAN,Clean boot
+MENUCOLOR=15,1
+
+[COMMON]
+DOS=HIGH,UMB
+FILES=40
+BUFFERS=20
+
+[GAMES]
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE RAM 2048
+
+[CLEAN]
+AUTOEXEC.BAT:
+@ECHO OFF
+PROMPT $P$G
+PATH C:\DOS;C:\APPS\BMAGIC
+GOTO %CONFIG%
+
+:GAMES
+LH C:\MOUSE\MOUSE.COM
+GOTO END
+
+:CLEAN
+GOTO END
+
+:END
+APPS\BMAGIC\BACKUP\001\AUTOEXEC.BAT:
+@ECHO OFF
+PROMPT $P$G
+PATH C:\DOS;C:\APPS\BMAGIC
+GOTO %CONFIG%
+
+:NORMAL
+LH C:\DOS\SMARTDRV.EXE
+GOTO END
+
+:GAMES
+LH C:\MOUSE\MOUSE.COM
+GOTO END
+
+:CLEAN
+GOTO END
+
+:END
+APPS\BMAGIC\BACKUP\001\CONFIG.SYS:
+[MENU]
+MENUITEM=NORMAL,Normal start
+MENUITEM=GAMES,Games (EMS)
+MENUITEM=CLEAN,Clean boot
+MENUDEFAULT=NORMAL,10
+MENUCOLOR=15,1
+
+[COMMON]
+DOS=HIGH,UMB
+FILES=40
+BUFFERS=20
+
+[NORMAL]
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICEHIGH=C:\DOS\SETVER.EXE
+
+[GAMES]
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE RAM 2048
+
+[CLEAN]
+APPS\BMAGIC\BACKUP\001\MSDOS.SYS:
+[Paths]
+WinDir=C:\WINDOWS
+WinBootDir=C:\WINDOWS
+HostWinBootDrv=C
+
+[Options]
+BootMulti=1
+BootGUI=1
+Logo=1
+;
+;The following lines are required for compatibility with other programs.
+;Do not remove them (MSDOS.SYS needs to be >1024 bytes).
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxa
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxb
+APPS\BMAGIC\BACKUP\001\SET.INI:
+[backup]
+date=YYYY-MM-DD
+time=HH:MM
+drive=C
+note=Before saving
+APPS\BMAGIC\BACKUP\002\AUTOEXEC.BAT:
+@ECHO OFF
+PROMPT $P$G
+PATH C:\DOS;C:\APPS\BMAGIC
+GOTO %CONFIG%
+
+:GAMES
+LH C:\MOUSE\MOUSE.COM
+GOTO END
+
+:CLEAN
+GOTO END
+
+:END
+APPS\BMAGIC\BACKUP\002\CONFIG.SYS:
+[MENU]
+MENUITEM=GAMES,Games (EMS)
+MENUITEM=CLEAN,Clean boot
+MENUCOLOR=15,1
+
+[COMMON]
+DOS=HIGH,UMB
+FILES=40
+BUFFERS=20
+
+[GAMES]
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE RAM 2048
+
+[CLEAN]
+APPS\BMAGIC\BACKUP\002\MSDOS.SYS:
+[Paths]
+WinDir=C:\WINDOWS
+WinBootDir=C:\WINDOWS
+HostWinBootDrv=C
+
+[Options]
+BootMulti=1
+BootGUI=1
+Logo=1
+;
+;The following lines are required for compatibility with other programs.
+;Do not remove them (MSDOS.SYS needs to be >1024 bytes).
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxa
+;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxb
+APPS\BMAGIC\BACKUP\002\SET.INI:
+[backup]
+date=YYYY-MM-DD
+time=HH:MM
+drive=C
+note=Made by hand

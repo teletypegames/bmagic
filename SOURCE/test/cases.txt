@@ -1,0 +1,29 @@
+# name | keystrokes of run 1 ; run 2 ; ... | sample drive in drives/ (default: menu)
+# Keys: names from run.py (Enter, Down, F2, Ins, CtrlPgUp, ...), "text" types the letters,
+# numbers are BIOS key codes. The runs of a case share the drive and the backups. A run
+# that ends with the keys saves the screen; one that quits leaves only the files.
+# Menu: NORMAL (default, 10 s), GAMES, CLEAN; MSDOS.SYS of Windows 98.
+
+menu                | 0
+menu_plain          | 0                                                   | plain
+item_lines          | Down Enter
+edit_line           | Down Enter Down Down Enter End Bksp Bksp Bksp Bksp Bksp Bksp Bksp Bksp "NOEMS" Enter F4
+add_line_review     | Enter Ins "LH C:\DOS\DOSKEY.COM" Enter Esc F2
+new_item_form       | Ins "safe" Tab "Safe mode" Tab "games"
+new_item_saved      | Ins "safe" Tab "Safe mode" Tab "games" Enter F2 F2 Esc
+first_menu_saved    | Ins "dos" Enter "Plain DOS" Enter Enter F2 F2 Esc   | plain
+delete_item_saved   | Down Down Del "y" F2 F2 Esc
+rename_item_saved   | Down F3 CtrlY "play" Tab CtrlY "Play games" Enter F2 F2 Esc
+move_item           | Down Down CtrlPgUp
+menu_options_form   | F6
+menu_options_saved  | F6 CtrlY "CLEAN" Tab CtrlY "5" Tab CtrlY Tab "off" Enter F2 F2 Esc
+startup_form        | F7
+startup_saved       | F7 "1" Tab Tab "3" Tab CtrlY "0" F2 F2 F2 Esc
+file_editor         | F8
+file_editor_tab     | F8 Tab
+help                | F1
+quit_question       | Del "y" Esc
+backups_list        | Del "y" F2 F2 F9
+backup_compare      | Del "y" F2 F2 F9 Enter
+restore_saved       | Del "y" F2 F2 F9 Down "r" "y" Esc Esc
+two_runs_backups    | Del "y" F2 F2 Esc ; F9 Ins

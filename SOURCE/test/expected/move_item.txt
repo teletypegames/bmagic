@@ -1,0 +1,25 @@
+ Boot Magic - boot menu of drive C:                                   * changed
+╔═ Boot menu ══════════════════════════════════════════════════════════════════╗
+║ #   Block      Menu text                                   CONFIG   AUTOEXEC ║
+║ 1 ► NORMAL     Normal start                                2 lines  2 lines  ║
+║ 2   CLEAN      Clean boot                                  0 lines  1 line   ║
+║ 3   GAMES      Games (EMS)                                 2 lines  2 lines  ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╟─ Menu ───────────────────────────────────────────────────────────────────────╢
+║ Default: NORMAL after 10 s   Color: 15,1   NumLock: -                        ║
+║                                                                              ║
+╟─ Files ──────────────────────────────────────────────────────────────────────╢
+║ C:\CONFIG.SYS   21 lines, changed                                            ║
+║ C:\AUTOEXEC.BAT 17 lines                                                     ║
+║ C:\MSDOS.SYS    14 lines  BootMenu=-  BootMenuDelay=-  BootGUI=1  Logo=1     ║
+╟──────────────────────────────────────────────────────────────────────────────╢
+║ Backups: none yet (saving makes one first)                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+ Enter Lines Ins New Del Delete F2 Save F4 Changes F9 Backups F1 Help Esc Quit

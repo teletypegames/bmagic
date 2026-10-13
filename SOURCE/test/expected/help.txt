@@ -1,0 +1,25 @@
+ Boot Magic - keys
+    ╔═ Keys ═══════════════════════════════════════════════════════════════╗
+    ║  Boot menu ────────────────────────────────────────────────────────  ║
+    ║   Enter            the lines of the item (CONFIG.SYS, AUTOEXEC.BAT)  ║
+    ║   Ins              new item (empty, or a copy of another)            ║
+    ║   Del              delete the item, its block and section            ║
+    ║   F3               the item's name and menu text                     ║
+    ║   Ctrl+PgUp/PgDn   move the item up / down in the menu               ║
+    ║   F5               make the item the default                         ║
+    ║   F6               the menu: default, timeout, color, NumLock        ║
+    ║   F7               the Windows startup options (MSDOS.SYS)           ║
+    ║   F8               edit a whole file (Tab: the next file)            ║
+    ║   F2               review the changes and save them                  ║
+    ║   F4               show the changes (not saved yet)                  ║
+    ║   F9               the backups                                       ║
+    ║   Esc              quit (asks when something is not saved)           ║
+    ║                                                                      ║
+    ║  Lines ────────────────────────────────────────────────────────────  ║
+    ║   Enter            edit the line                                     ║
+    ║   Ins              a new line after the selected one                 ║
+    ║   Del              delete the line                                   ║
+    ║   Ctrl+PgUp/PgDn   move the line up / down                           ║
+    ║   Esc              back to the menu                                  ║
+    ╚══════════════════════════════════════════════════════════════════↓═══╝
+ ↑↓ PgUp PgDn Scroll  Esc Close
