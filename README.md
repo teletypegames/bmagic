@@ -2,6 +2,8 @@
 
 Boot Magic (`BMAGIC.EXE`, about 64 KB) edits the boot menu of MS-DOS 6 and later. It reads `CONFIG.SYS`, `AUTOEXEC.BAT` and `MSDOS.SYS` in the root folder of the boot drive, maps the menu in them (the `[MENU]` block, the block of each item in `CONFIG.SYS`, and its section after `GOTO %CONFIG%` in `AUTOEXEC.BAT`), and lets you add, edit, copy, rename, move and delete menu items, edit their lines, and set the default item, the timeout, the colors and NumLock. It also sets the startup options of a Windows 95/98 `MSDOS.SYS`. It changes only the lines it has to change. Before every save it backs up the files and shows what it will change in a diff; any backup can be compared with the files on the disk or restored.
 
+![Boot Magic main screen](screenshot.png)
+
 ## Files
 
 | File | Purpose |
