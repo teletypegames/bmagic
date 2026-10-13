@@ -117,7 +117,7 @@ The layers and the rules of the code are the same as in [GMENU](https://git.tele
 | `SOURCE/app` | `runBmagic` puts the layers together. The seven `TextFile`s (17 KB each) are allocated one by one. |
 | `SOURCE/lib` | doslib, shared with GMENU and DOSINST. |
 
-`SOURCE/lib` is a copy of doslib. When the program has its own repository, make it a git subtree as in the other programs (see `SOURCE/lib/README.md`).
+`SOURCE/lib` is a git subtree of [doslib](https://git.teletypegames.org/dos/doslib) (see `SOURCE/lib/README.md` for pulling its changes).
 
 ## Building
 
