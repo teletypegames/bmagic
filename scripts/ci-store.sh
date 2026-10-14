@@ -1,6 +1,6 @@
 #!/bin/sh
-# Publish the built program to the DOSINST program store (dos/dosinst,
-# ftp://ftp.teletypegames.org): the BMAGIC folder as it is installed, plus an INFO.INI
+# Publish the built program to the DOSINST program store
+# (ftp://ftp.teletypegames.org/APPS): the BMAGIC folder as it is installed, plus an INFO.INI
 # with the version of the tag, so DOSINST can install and update it (to C:\APPS\BMAGIC
 # with the default DEST), and a FILES.LST ("crc32 size path" per file, as dos/dosinst's
 # server/mkfiles.sh writes it) that DOSINST checks every download against.
@@ -8,7 +8,7 @@
 #   scripts/ci-store.sh              the tag from Woodpecker (CI_COMMIT_TAG)
 #   TAG=v1.2.3 STORE=/tmp/store scripts/ci-store.sh
 #
-# STORE is the store's programs folder; in the pipeline /srv/stacks/dosinst/programs of
+# STORE is the store's programs folder; in the pipeline /srv/stacks/ftp-server/root/APPS of
 # the server is mounted there. The new folder is put together next to the old one and
 # swapped in with two renames, so a download never sees it half written. The files get
 # STORE_OWNER (the server's tasi user), so the store can be managed without sudo. The
