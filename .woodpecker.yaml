@@ -10,9 +10,12 @@
 # to install, and BMAGIC.EXE alone, for updating an installed one.
 #
 # A tag also puts the program into the DOSINST program store
-# (ftp://ftp.teletypegames.org/APPS): the store step writes the BMAGIC folder with an INFO.INI
-# into the server's /srv/stacks/ftp-server/root/APPS. The volume needs the repository to
-# be trusted for volumes in Woodpecker (Repo settings -> Trusted).
+# (ftp://ftp.teletypegames.org/APPS): the store step builds the BMAGIC folder(s) with an INFO.INI
+# and a FILES.LST (scripts/ci-store.sh into a temporary folder) and sends them as a tar
+# over SSH to the server's deploy user. Its key (secret deploy_ssh_key, tag events only)
+# is bound on the server to one fixed command (ci-deploy, infra/host-config), which unpacks
+# the upload unprivileged, accepts only the BMAGIC folder(s) with regular files, and
+# swaps them into /srv/stacks/ftp-server/root/APPS. No trusted volumes are needed.
 when:
   - event: [push, manual]
     branch: master
@@ -47,10 +50,16 @@ steps:
 
   # Only on a tag, after the release: DOSINST installs and updates BMAGIC from the store.
   - name: store
-    image: alpine
-    volumes:
-      - /srv/stacks/ftp-server/root/APPS:/store
+    image: alpine/git:v2.54.0
+    environment:
+      DEPLOY_SSH_KEY:
+        from_secret: deploy_ssh_key
     commands:
-      - scripts/ci-store.sh
+      - rm -rf /tmp/store && mkdir /tmp/store
+      - STORE=/tmp/store scripts/ci-store.sh
+      - mkdir -p -m 700 "$HOME/.ssh"
+      - printf '%s\n' "$DEPLOY_SSH_KEY" > "$HOME/.ssh/id_deploy" && chmod 600 "$HOME/.ssh/id_deploy"
+      - echo 'vps.teletype.hu ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPR9RYc98lPw4w6LYlaVAkZTlleO+kE4vyWxEk9x3EDd' > "$HOME/.ssh/known_hosts"
+      - tar -C /tmp/store -cf - . | ssh -i "$HOME/.ssh/id_deploy" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes deploy@vps.teletype.hu
     when:
       - event: tag
