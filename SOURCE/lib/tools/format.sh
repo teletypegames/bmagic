@@ -1,7 +1,7 @@
 #!/bin/sh
 # Formats the sources of a program (its SOURCE folder, default: the current one) with the
-# .clang-format of doslib; --check only tells which files differ. Vendored code (MTCP)
-# and the copied lib are left out (doslib is formatted in its own folder).
+# .clang-format of DOSLIB; --check only tells which files differ. Vendored code (MTCP)
+# and the copied lib are left out (DOSLIB is formatted in its own folder).
 #   CLANG_FORMAT   the clang-format 18 binary (default: clang-format)
 set -e
 CHECK=

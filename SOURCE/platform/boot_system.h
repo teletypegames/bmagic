@@ -1,5 +1,5 @@
 /*
-   What BMAGIC needs from DOS beyond doslib: the boot drive, the attributes of a file
+   What BMAGIC needs from DOS beyond DOSLIB: the boot drive, the attributes of a file
    (MSDOS.SYS is read-only, hidden and system, and keeps that after it is saved), and the
    date and time for the backups.
 */

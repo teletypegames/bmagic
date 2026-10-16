@@ -1,6 +1,6 @@
 /*
    The keys BMAGIC uses beyond lib/ui/keys.h. Ctrl+Up / Ctrl+Down come only from the
-   enhanced keyboard functions of the BIOS, which doslib does not use: moving is
+   enhanced keyboard functions of the BIOS, which DOSLIB does not use: moving is
    Ctrl+PgUp / Ctrl+PgDn, and the Ctrl+arrows work where they arrive.
 */
 
