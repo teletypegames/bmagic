@@ -11,7 +11,8 @@ are new or changed on the drive and the files of its backups.
 usage: run.py [--update] [case ...]
   --update   write the results to expected/ instead of comparing
 DOSBOX=<path> selects the emulator (default: dosbox-staging / dosbox in PATH,
-or DOSBox Staging.app on macOS).
+or DOSBox Staging.app on macOS). JOBS=<n> runs that many cases at once
+(default: 4).
 """
 import os
 import re
@@ -19,6 +20,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.dirname(HERE)
@@ -166,9 +168,11 @@ def main():
     cases = [c for c in load_cases() if not selected or c[0] in selected]
     built = build()
     failed = 0
-    with tempfile.TemporaryDirectory() as tmp:
-        for name, runs, drive in cases:
-            got = run_case(dosbox, tmp, built, name, runs, drive)
+    jobs = max(1, int(os.environ.get("JOBS") or 4))
+    with tempfile.TemporaryDirectory() as tmp, ThreadPoolExecutor(jobs) as pool:
+        # every case has its own folder in tmp; the results come in the order of the cases
+        results = pool.map(lambda case: run_case(dosbox, tmp, built, *case), cases)
+        for (name, *_), got in zip(cases, results):
             path = os.path.join(HERE, "expected", name + ".txt")
             if update:
                 with open(path, "w", encoding="utf-8") as f:

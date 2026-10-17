@@ -24,7 +24,10 @@ when:
 
 steps:
   - name: test
-    image: debian:bookworm-slim
+    # Debian bookworm with the toolchain of scripts/ci-toolchain.sh preinstalled
+    # (services/teletypegames ci/dos-bookworm.Dockerfile); a moving tag, so always pulled.
+    image: git.teletypegames.org/build/dos-ci:bookworm
+    pull: true
     commands:
       - scripts/ci-toolchain.sh
       - scripts/ci-check.sh
