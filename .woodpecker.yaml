@@ -37,7 +37,9 @@ steps:
   # Only on a tag, and only after the tests passed: the release gets the program the
   # test step built and tested.
   - name: release
-    image: alpine
+    # curl, jq, zip and git are in the image (services/teletypegames ci/ci-tools.Dockerfile); by digest,
+    # since the step gets a token
+    image: git.teletypegames.org/build/ci-tools@sha256:4f03160226e51bdf67b850f21a9fbeab7314127766979f72e514efb5ef4dcba8
     environment:
       # A build started by the tag webhook may not get Woodpecker's forge credential, so
       # the token is a repository secret; the script falls back to the forge credential
@@ -45,7 +47,6 @@ steps:
       GITEA_TOKEN:
         from_secret: gitea_token
     commands:
-      - apk add --no-cache curl jq zip
       - scripts/ci-package.sh
       - scripts/ci-upload.sh
     when:
