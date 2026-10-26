@@ -7,6 +7,13 @@
   "category": "tool",
   "repo": "https://git.teletypegames.org/dos/bmagic",
   "dos": {
-    "folder": "BMAGIC"
+    "folder": "BMAGIC",
+    "files": [
+      "BMAGIC.EXE",
+      "README.md",
+      "LICENSE.md"
+    ],
+    "store_name": "Boot Magic",
+    "store_description": "Boot menu editor: maps and edits the boot menu of CONFIG.SYS and AUTOEXEC.BAT and the startup options of MSDOS.SYS, backs them up and shows what it changed. Start it with BMAGIC."
   }
 }

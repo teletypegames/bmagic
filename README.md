@@ -140,7 +140,7 @@ The unit tests run every layer above the platform on an in-memory disk: the menu
 
 ## Releases
 
-Woodpecker (`.woodpecker.yaml`) runs the code style check, the layer check and the unit tests (`scripts/ci-check.sh`), then the build and the DOSBox tests on every push. A `vX.Y.Z` tag, which has to match `Version` in `SOURCE/app/version.h`, also publishes a Gitea release with `RELEASE_NOTES.md`, `BMAGIC-vX.Y.Z.zip` and `BMAGIC.EXE`. The same tag puts `BMAGIC` into the DOSINST store (`scripts/ci-store.sh`, with an `INFO.INI` and a `FILES.LST`). For that, the repository has to be trusted for volumes in Woodpecker.
+Woodpecker (`.woodpecker.yaml`, a `platform: dos` marker) runs the pipeline the WarpEngine of teletypegames.org serves, with the commands of the [dos-tools](https://git.teletypegames.org/build/dos-tools) builder image (Open Watcom, DOSBox Staging, Wine, clang-format): on every push `dos-check` (the code style, the layers and the unit tests), `dos-build` (`SOURCE/build.sh`) and `dos-test` (`SOURCE/test/run.py`, the DOSBox tests). A `vX.Y.Z` tag, which has to match `Version` in `SOURCE/app/version.h`, also publishes a Gitea release with `RELEASE_NOTES.md`, `BMAGIC-vX.Y.Z.zip` and `BMAGIC.EXE`, publishes the release to the WarpEngine catalog, and puts `BMAGIC` into the DOSINST store (with an `INFO.INI` and a `FILES.LST`). What a release holds is the `dos` block of `metadata.json`.
 
 ## Limitations
 
