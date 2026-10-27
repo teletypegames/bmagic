@@ -140,7 +140,15 @@ The unit tests run every layer above the platform on an in-memory disk: the menu
 
 ## Releases
 
-Woodpecker (`.woodpecker.yaml`, a `platform: dos` marker) runs the pipeline the WarpEngine of teletypegames.org serves, with the commands of the [dos-tools](https://git.teletypegames.org/build/dos-tools) builder image (Open Watcom, DOSBox Staging, Wine, clang-format): on every push `dos-check` (the code style, the layers and the unit tests), `dos-build` (`SOURCE/build.sh`) and `dos-test` (`SOURCE/test/run.py`, the DOSBox tests). A `vX.Y.Z` tag, which has to match `Version` in `SOURCE/app/version.h`, also publishes a Gitea release with `RELEASE_NOTES.md`, `BMAGIC-vX.Y.Z.zip` and `BMAGIC.EXE`, and publishes the release to the WarpEngine catalog, whose DOS shelf is the DOSINST store: the engine puts `BMAGIC` there (with an `INFO.INI` and a `FILES.LST`). What a release holds is the `dos` block of `metadata.json`.
+Woodpecker (`.woodpecker.yaml`, a `platform: dos` marker) runs the pipeline the WarpEngine of teletypegames.org serves, with the commands of the [dos-tools](https://git.teletypegames.org/build/dos-tools) builder image (Open Watcom, DOSBox Staging, Wine, clang-format): on every push `dos-check` (the code style, the layers and the unit tests), `dos-build` (`SOURCE/build.sh`) and `dos-test` (`SOURCE/test/run.py`, the DOSBox tests). The `vX.Y.Z` tag of a release publishes a Gitea release with `RELEASE_NOTES.md`, `BMAGIC-vX.Y.Z.zip` and `BMAGIC.EXE`, and publishes the release to the WarpEngine catalog, whose DOS shelf is the DOSINST store: the engine puts `BMAGIC` there (with an `INFO.INI` and a `FILES.LST`). What a release holds is the `dos` block of `metadata.json`.
+
+A release is a raised version: raise `version` in `metadata.json` together with `Version` in `SOURCE/app/version.h` (the two have to match), and push it to master. The pipeline tags the commit `vX.Y.Z` itself, and that tag's pipeline makes the release. A push that leaves the version as it is only builds and tests; a tag made by hand still works, but has to match the version. Off master a push builds a `dev-` version, which never reaches the store.
+
+```sh
+# edit metadata.json and SOURCE/app/version.h, then
+git commit -am "Version X.Y.Z"
+git push origin master
+```
 
 ## Limitations
 
