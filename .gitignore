@@ -2,6 +2,7 @@ BMAGIC.EXE
 SOURCE/build/
 SOURCE/test/expected/*.got
 dist/
+/.release-assets
 *.err
 .DS_Store
 # Written when this checkout is also the installed program
